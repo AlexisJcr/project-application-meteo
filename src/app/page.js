@@ -60,17 +60,13 @@ export default function WeatherPage() {
   const fetchWeatherData = async (city) => {
     setLoading(true);
     try {
-      const apiKey = process.env.NEXT_PUBLIC_WEATHER_API_KEY;
-      console.log(apiKey);
-      const response = await axios.get(
-        `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&lang=fr&days=10`
-      );
+      const response = await axios.get(`/api/weatherapi?city=${encodeURIComponent(city)}`);
       setWeatherData(response.data);
     } catch (error) {
       console.error('Erreur lors de la récupération des données météo', error);
     }
     setLoading(false);
-  };
+};
 
   //===== DICTIONNAIRE DES ICONS =====//
   const weatherIcons = {
