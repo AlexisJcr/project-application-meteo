@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*, ::before, ::after { 
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+
+/*======================*/
+/*===== PAGE METEO =====*/
+/*======================*/
+
+.meteo-interface{
+  height: 91.6vh;
+  background: rgb(21,21,21);
+  background: linear-gradient(140deg, rgba(21,21,21,1) 20%, rgba(20,20,43,1) 80%);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  gap: 45px;
+  padding: 40px;
+}
+
+.meteo-interface-group{
+  z-index: 1;
+  width: 65vw;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.meteo-interface-group-top{
+  padding: 20px;
+  background-color: rgba(47, 47, 109, 0.600);
+  border-radius: 12px;
+  height: 40px;
+}
+
+.meteo-interface-group-top ul{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 50px;
+  padding: 0;
+}
+
+.meteo-interface-group-top li{
+  font-size: 20px;
+  position: relative;
+  padding: 5px;
+  border-radius: 5px;
+  transition: all 0.12s;
+}
+
+.meteo-interface-group-top li:hover{
+  background-color: #14142B;
+}
+
+.meteo-interface-group-top li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -25px;
+  height: 30px;
+  width: 1.5px;
+  background-color: white;
+}
+
+.meteo-interface-group-infos{
+  display: flex;
+  flex-direction: row;
+}
+
+.meteo-infos-box1{
+  padding: 10px;
+  width: 40vw;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.meteo-infos-box1 h1{
+  font-size: 30px;
+  font-weight: 300;
+}
+.meteo-infos-box1 h2{
+  font-size: 40px;
+  font-weight: 500;
+}
+
+
+.meteo-infos-box2{
+  padding: 10px;
+  width: 60vw;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.meteo-infos-box2 h1{
+  font-size: 40px;
+  font-weight: 300;
+}
+.meteo-infos-box2 h2{
+  font-size: 45px;
+  font-weight: 600;
+}
+.meteo-infos-box2 h3{
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.meteo-infos-box3{
+  width: 40vw;
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+}
+
+.meteo-infos-box3-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.meteo-interface-group-hours{
+  height: 100%;
+  background-color: rgba(47, 47, 109, 0.600);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.meteo-interface-group-hours h2{
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.meteo-hours-grid{
+  display: flex;
+  justify-content: center;
+}
+
+.meteo-interface-group-hours ul{
+  margin-top: 15px;
+  list-style: none;
+}
+
+
+.meteo-interface-group-hours li{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  padding: 2px;
+}
+
+
+.meteo-interface-group-hours li:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Change le fond au survol */
+  cursor:default;
+}
+
+.meteo-interface-group-hours li h3{
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.meteo-interface-group-hours li h4{
+  font-weight: 300;
+  font-size: 18px;
+} 
+
+
+.meteo-interface-group-conditions{
+  z-index: 1;
+  background-color: rgba(47, 47, 109, 0.600);
+  height: 100%;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.meteo-interface-group-conditions h2{
+  font-size: 20px;
+  font-weight: 400;
+}
+
+
+.meteo-interface-conditions-container{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.meteo-interface-conditions-container ul{
+  list-style: none;
+}
+
+.meteo-conditions-box1 ul, .meteo-conditions-box2 ul, .meteo-conditions-box3 ul, .meteo-conditions-box4 ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px
+}
+
+
+
+
+
+.meteo-interface-right{
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(47, 47, 109, 0.600);
+  border-radius: 12px;
+  padding: 20px;
+  gap: 20px
+}
+
+.meteo-interface-right h2{
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.meteo-interface-right h3{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.meteo-interface-right h4{
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.meteo-interface-right h5{
+  font-size: 15px;
+  font-weight: 200;
+}
+
+.meteo-interface-hebdo-container ul{
+  list-style: none;
+}
+
+.meteo-interface-hebdo-container li{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
