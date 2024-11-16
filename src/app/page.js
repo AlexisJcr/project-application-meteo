@@ -119,7 +119,7 @@ export default function WeatherPage() {
   const currentWeather = weatherData.current;
 
   return (
-      <body className="meteo-interface">
+      <div className="meteo-interface">
         <div className="meteo-interface-group">
 
           <div className="meteo-interface-group-top">
@@ -150,7 +150,7 @@ export default function WeatherPage() {
             </div>
             <div className="meteo-infos-box3">
               <div className="meteo-infos-box3-img">
-                <Image src={getWeatherIcon(currentWeather.condition.text)} width={128} height={128}/>
+                <Image src={getWeatherIcon(currentWeather.condition.text)} alt={currentWeather.condition.text} width={128} height={128}/>
               </div>
             </div>
           </div>
@@ -176,7 +176,7 @@ export default function WeatherPage() {
             <div className="meteo-interface-conditions-container">
               <div className='meteo-conditions-box1'>
                 <ul>
-                  <li><Image src={icon_sunrise} alt="Sunrise-Sunset" width={50} height={50} /></li>
+                  <li><Image src={icon_sunrise} alt="Sunrise" width={50} height={50} /></li>
                   <li>
                     {weatherData.forecast.forecastday[0].astro.sunrise}
                   </li>
@@ -228,6 +228,6 @@ export default function WeatherPage() {
           </div>
         </div>
 
-    </body>
+    </div>
   );
 }
